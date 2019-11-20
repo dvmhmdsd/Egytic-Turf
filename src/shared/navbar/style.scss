@@ -1,0 +1,51 @@
+@import "../variables.scss";
+
+.navbar {
+  // make the navbar content flexible
+  background-color: transparent;
+  box-shadow: 1px 1px 3px 4px #ccc;
+  transition: background-color 0.2s;
+  padding: 10px 0;
+
+  & > * {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // scrollable style
+  &.navbar--scrolled {
+    background-color: #fff;
+  }
+
+  // make the list of links inline
+  .nav-links-list {
+    display: none;
+    list-style: none;
+
+    .nav-list-item {
+      margin: 0 10px;
+
+      .nav-list-item-link {
+        color: $mainTextColor;
+        text-decoration: none;
+
+        // &:hover {
+
+        // }
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .navbar {
+    .navbar-list-toggler {
+      display: none;
+    }
+
+    .nav-links-list {
+      display: flex;
+    }
+  }
+}

@@ -32,9 +32,9 @@ function dispatch() {
  *
  * @param {array} internalserviceProviders
  */
-function registerInternalServiceProviders(internalserviceProviders) {
-  for (let serviceProvider of serviceProviders) {
-    let { name, call } = serviceProvider;
+function registerInternalServiceProviders(internalServiceProviders) {
+  for (let serviceProvider of internalServiceProviders) {
+    let { name, call } = serviceProvider.provider;
 
     moduleServices[name] = call;
   }

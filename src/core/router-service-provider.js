@@ -1,3 +1,9 @@
+import React from "react";
+import ReactDOM from "react-dom";
+
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
+import Navbar from "../shared/navbar";
+
 let routesList = [];
 
 /**
@@ -13,6 +19,9 @@ function addRoute(path, component) {
   });
 }
 
+/**
+ * Register routes of the application
+ */
 function RouteRenderer() {
   const routes = routesList.map((route, idx) => {
     return (
@@ -20,9 +29,12 @@ function RouteRenderer() {
     );
   });
   return (
-    <Router>
-      <Switch>{routes}</Switch>
-    </Router>
+    <>
+      <Navbar />
+      <Router>
+        <Switch>{routes}</Switch>
+      </Router>
+    </>
   );
 }
 

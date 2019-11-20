@@ -41,7 +41,7 @@ src/
 +-- modules/ - the modules of the application
 |   +-- home/ - all the components & tests of the home module
 |   |   +-- components/ - all the compoennts of the module
-|   |   |   +-- header/ - the header of the home page
+|   |   |   +-- intro/ - the introduction of the home page
 |   |   |   |   +-- index.js - the logic of the header component which renders a video
 |   |   |   |   +-- style.scss - style of the header component
 |   |   |   +-- info/ - the main slogan & clients count of the organization
@@ -98,7 +98,7 @@ src/
 |   +-- footer/ - the footer component
 |   |   +-- index.js - the container of the footer component that renders the logo, info, social list & the location of the organization
 |   |   +-- style.scss - styles of the footer
-|   +-- pageHeader/ - the header of every secondery page
+|   +-- pagePreface/ - the preface of every secondery page either the home page
 |   |   +-- index.js - the container of the pageHeader component that get props of the location and represents it e.g: if u are in the about page it will represents: /about
 |   |   +-- style.scss - styles of the pageHeader
 ```
