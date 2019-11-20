@@ -1,12 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+// Get the connector of the application
+import reactor from "./core/Reactor";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// get all the modules' service providers
+import HomeModule from "./modules/home/service-provider";
+import AboutModule from "./modules/about/service-provider";
+import GalleryModule from "./modules/gallery/service-provider";
+import ContactModule from "./modules/contact/service-provider";
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// Register all the modules
+reactor.registerServiceProviders([
+  HomeModule,
+  AboutModule,
+  GalleryModule,
+  ContactModule
+]);
+
+// Bootstrap the application
+reactor.react();
