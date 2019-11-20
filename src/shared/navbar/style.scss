@@ -6,6 +6,8 @@
   box-shadow: 1px 1px 3px 4px #ccc;
   transition: background-color 0.2s;
   padding: 10px 0;
+  position: fixed;
+  width: 100%;
 
   & > * {
     display: flex;
@@ -16,6 +18,22 @@
   // scrollable style
   &.navbar--scrolled {
     background-color: #fff;
+  }
+
+  // style the toggler
+  .navbar-list-toggler {
+    // set the position
+    position: absolute;
+    right: 10px;
+
+    // set the ui
+    color: #fff;
+    background-color: transparent;
+    border: 0;
+
+    &.navbar-list-toggler--scrolled {
+      color: $mainTextColor;
+    }
   }
 
   // make the list of links inline
@@ -29,10 +47,11 @@
       .nav-list-item-link {
         color: $mainTextColor;
         text-decoration: none;
+        transition: border-bottom 0.2s;
 
-        // &:hover {
-
-        // }
+        &:hover {
+          border-bottom: 2px solid $mainTextColor;
+        }
       }
     }
   }

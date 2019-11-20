@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
+import Layout from '../../../../shared/layout'
 
 export default class Home extends Component {
   render() {
     return (
-      <>
-        <h1>Home Component</h1>
-      </>
+      <Layout>
+        <h1> Home Page </h1>
+      </Layout>
     )
   }
 }

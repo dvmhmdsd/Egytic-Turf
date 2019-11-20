@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import menuList from "../menuList";
 
-import { Link, BrowserRouter as Router } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import "./style.scss";
 
@@ -22,17 +22,15 @@ export default class Navbar extends Component {
           <button className="navbar-list-toggler"> &#9776; </button>
 
           <section className="navbar-links">
-            <Router>
-              <ul className="nav-links-list">
-                {menuList.map(listItem => (
-                  <li key={listItem.link} className="nav-list-item">
-                    <Link to={`/${listItem.link}`} className="nav-list-item-link">
-                      {listItem.listItemName}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </Router>
+            <ul className="nav-links-list">
+              {menuList.map(listItem => (
+                <li key={listItem.link} className="nav-list-item">
+                  <NavLink to={listItem.link} className="nav-list-item-link">
+                    {listItem.listItemName}
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
           </section>
         </section>
       </nav>

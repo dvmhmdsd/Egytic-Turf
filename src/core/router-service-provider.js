@@ -19,22 +19,27 @@ function addRoute(path, component) {
   });
 }
 
-/**
- * Register routes of the application
- */
-function RouteRenderer() {
+function Test() {
+  console.log(3)
   const routes = routesList.map((route, idx) => {
     return (
       <Route path={route.path} exact key={idx} component={route.component} />
     );
   });
+  return <Switch>{routes}</Switch>
+}
+
+/**
+ * Register routes of the application
+ */
+function RouteRenderer() {
+
   return (
-    <>
+    <Router>
       <Navbar />
-      <Router>
-        <Switch>{routes}</Switch>
-      </Router>
-    </>
+      <Test />
+    </Router>
+
   );
 }
 
