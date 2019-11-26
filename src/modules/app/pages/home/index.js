@@ -1,11 +1,22 @@
 import React, { Component } from 'react'
 import Layout from '../../../../shared/layout'
+import Intro from './components/intro'
+import Info from './components/info'
+import Map from './components/map'
+import Services from './components/services'
+import Testimonials from './components/testimonials'
 
 export default class Home extends Component {
   render() {
     return (
       <Layout>
-        <h1> Home Page </h1>
+        <Intro />
+        <main>
+          <Info />
+          <Map />
+          <Services />
+          <Testimonials />
+        </main>
       </Layout>
     )
   }

@@ -3,11 +3,12 @@
 .navbar {
   // make the navbar content flexible
   background-color: transparent;
-  box-shadow: 1px 1px 3px 4px #ccc;
+  box-shadow: 0px 1px 2px 1px #000;
   transition: background-color 0.2s;
   padding: 10px 0;
   position: fixed;
   width: 100%;
+  z-index: 8;
 
   & > * {
     display: flex;
@@ -18,6 +19,20 @@
   // scrollable style
   &.navbar--scrolled {
     background-color: #fff;
+
+    .nav-links-list {
+      .nav-list-item {
+        color: $mainTextColor;
+        
+        .nav-list-item-link {
+          color: $mainTextColor;
+          &:hover {
+            border-bottom: 2px solid $mainTextColor;
+          }
+        }
+      }
+    }
+
   }
 
   // style the toggler
@@ -25,6 +40,8 @@
     // set the position
     position: absolute;
     right: 10px;
+
+    cursor: pointer;
 
     // set the ui
     color: #fff;
@@ -43,16 +60,45 @@
 
     .nav-list-item {
       margin: 0 10px;
+      position: relative;
+      cursor: pointer;
+      color: #fff;
 
       .nav-list-item-link {
-        color: $mainTextColor;
+        color: white;
         text-decoration: none;
         transition: border-bottom 0.2s;
 
         &:hover {
-          border-bottom: 2px solid $mainTextColor;
+          border-bottom: 2px solid #fff;
         }
       }
+
+      .languages {
+        list-style: none;
+        background-color: #fff;
+        width: 300px;
+        color: $mainTextColor;
+
+        .language-item {
+          button {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            width: 100%;
+            padding: 0 10px;
+            font-size: 18px;
+            text-align: left;
+            margin-bottom: 6px;
+
+            &:hover {
+              background-color: rgba(165, 162, 162, 0.4);
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
     }
   }
 }
@@ -65,6 +111,12 @@
 
     .nav-links-list {
       display: flex;
+
+      .languages {
+        box-shadow: 0px 0px 3px 0px #000;
+        top: 26px;
+        position: absolute;
+      }
     }
   }
 }

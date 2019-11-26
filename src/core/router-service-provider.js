@@ -2,7 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
-import Navbar from "../shared/navbar";
+
+import LanguageProvider, { LanguageContextProvider } from "../contexts/language-context"
 
 let routesList = [];
 
@@ -20,25 +21,36 @@ function addRoute(path, component) {
 }
 
 function Test() {
-  console.log(3)
   const routes = routesList.map((route, idx) => {
     return (
-      <Route path={route.path} exact key={idx} component={route.component} />
+      <Route path={`/(en|ar|)${route.path}`} exact key={idx}>
+        <LanguageContextProvider.Consumer>
+          {context => (
+            <route.component context={context} />
+          )}
+        </LanguageContextProvider.Consumer>
+      </Route>
     );
   });
-  return <Switch>{routes}</Switch>
+
+  return (
+    <Switch>
+      {routes}
+    </Switch>
+  )
 }
 
 /**
- * Register routes of the application
+ * Register routes of the application and provide language context
  */
 function RouteRenderer() {
 
   return (
-    <Router>
-      <Navbar />
-      <Test />
-    </Router>
+    <LanguageProvider>
+      <Router>
+        <Test />
+      </Router>
+    </LanguageProvider>
 
   );
 }

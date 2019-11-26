@@ -3,7 +3,7 @@ import About from "./pages/about";
 import Gallery from "./pages/gallery";
 import Contact from "./pages/contact";
 
-export default route => {
+export default (route) => {
   route("/", Home);
   route("/about", About);
   route("/gallery", Gallery);

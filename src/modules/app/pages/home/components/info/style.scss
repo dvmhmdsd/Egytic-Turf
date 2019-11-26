@@ -1,0 +1,23 @@
+@import "../../../../../../shared/variables.scss";
+
+.info-section {
+  background: url("../../../../../../assets/stats-lower-background.png") no-repeat center bottom fixed;
+  & > * {
+    padding: 70px;
+  }
+
+  .slogan-section {
+    background-color: #e7f6e5;
+
+    .main-slogan {
+      margin: 60px 0;
+      font-size: 4vw;
+      color: $mainTextColor;
+    }
+  }
+
+  .clients-section {
+    display: flex;
+    padding: 90px;
+  }
+}

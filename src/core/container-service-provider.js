@@ -30,7 +30,7 @@ function dispatch() {
 /**
  * Register all the internal service providers needed for the modules
  *
- * @param {array} internalserviceProviders
+ * @param {array} internalServiceProviders
  */
 function registerInternalServiceProviders(internalServiceProviders) {
   for (let serviceProvider of internalServiceProviders) {

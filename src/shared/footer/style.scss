@@ -1,0 +1,27 @@
+@import "../variables.scss";
+
+footer {
+    background: #e7f6e5 url("../../assets/footer-background.png") no-repeat center bottom;
+    padding: 1rem 1rem 2rem;
+
+    & > * {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    & .container > * {
+        text-align: center;
+    }
+
+    p {
+        color: $mainTextColor;
+        a {
+            color: $mainTextColor;
+            text-decoration: none;
+        }
+    }
+
+    .footer-map {
+        padding: 80px;
+    }
+}

@@ -101,4 +101,5 @@ src/
 |   +-- pagePreface/ - the preface of every secondery page either the home page
 |   |   +-- index.js - the container of the pageHeader component that get props of the location and represents it e.g: if u are in the about page it will represents: /about
 |   |   +-- style.scss - styles of the pageHeader
++-- .env - to configure the urls to be absolute
 ```

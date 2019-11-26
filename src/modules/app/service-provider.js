@@ -1,5 +1,5 @@
-import routes from "./routes";
+import routes from "./components"
 
-export default function(reactor) {
-  routes(reactor.route, reactor);
+export default function (reactor) {
+    routes(reactor.route, reactor)
 }

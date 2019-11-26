@@ -1,10 +1,12 @@
+@import "./shared/variables.scss";
+
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-    font-size: 22px;
+  font-size: 22px;
 }
 
 .container {
@@ -15,4 +17,23 @@ body {
 .container-fluid {
   padding-right: 3%;
   padding-left: 3%;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.heading-break {
+  height: 4px;
+  width: 23px;
+  background-color: $mainTextColor;
+  display: inline-block;
+}
+
+.section-heading {
+  color: $mainTextColor;
 }
