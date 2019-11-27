@@ -31,75 +31,133 @@ To review this repo locally:
 
 ```
 src/
-+-- index.js - the entry point of the application
-+-- context/ - folder which contains all the contexts used for shared data
-+-- core/ - all the starters of the application
-|   +-- Reactor.js - the connector of the application
-|   +-- container-service-provider.js - provider that provide all methods to service providers of the modules
-|   +-- router-service-provider.js - provider that provide routing services to all modules
-|   +-- serviceWorker.js - handling offline and PWA concepts of the application
-+-- modules/ - the modules of the application
-|   +-- home/ - all the components & tests of the home module
-|   |   +-- components/ - all the compoennts of the module
-|   |   |   +-- intro/ - the introduction of the home page
-|   |   |   |   +-- index.js - the logic of the header component which renders a video
-|   |   |   |   +-- style.scss - style of the header component
-|   |   |   +-- info/ - the main slogan & clients count of the organization
-|   |   |   |   +-- index.js - the logic of the info component which renders a video
-|   |   |   |   +-- style.scss - style of the info component
-|   |   |   +-- map/ - the location of their work and history
-|   |   |   |   +-- index.js - the logic of the info component which renders a video
-|   |   |   |   +-- style.scss - style of the info component
-|   |   |   +-- services/ - renders a list of items that represents the services of the organization
-|   |   |   |   +-- service-item/
-|   |   |   |   |   +-- index.js - represents the props from `services` parent component
-|   |   |   |   |   +-- style.scss - style of the single item
-|   |   |   |   +-- index.js - contains the state & the logic of the services and pass it to `service-item`
-|   |   |   +-- testimonials/ - renders a slider of items represents testimonials of the clients
-|   |   |   |   +-- testimonial-item/
-|   |   |   |   |   +-- index.js - represents the props from `testimonials` parent component
-|   |   |   |   |   +-- style.scss - style of the single item
-|   |   |   |   +-- index.js - containes the state & the logic of the testimonials and pass it to `testimonial-item`
-|   |   +-- tests/ - contains all unit & integration tests of the home module
-|   |   +-- index.js - the container and entry point of the home page
-|   |   +-- service-provider.js - contains all the services needed by the home module
-|   +-- gallery/ - all the components & tests of the gallery module
-|   |   +-- components/ - all the compoennts of the module
-|   |   |   +-- gallery-container/ - renders a list of items of images with preview
-|   |   |   |   +-- index.js - passing a state of dynamic paths of images to `gallery-item`
-|   |   |   |   +-- gallery-item/ - represents a single image
-|   |   +-- tests/ - contains all unit & integration tests of the gallery module
-|   |   +-- index.js - the container and entry point of the gallery page
-|   |   +-- service-provider.js - contains all the services needed by the gallery module
-|   +-- contact/ - all the components & tests of the contact module
-|   |   +-- components/ - all the components of the module
-|   |   |   +-- contact-form/ - contains the form of the contacting
-|   |   |   |   +-- index.js - handles the logic and state of the contact form
-|   |   |   |   +-- style.scss - style of the form
-|   |   |   +-- contact-info/ - the info of the organization
-|   |   |   |   +-- index.js - renders a list of contact info
-|   |   |   |   +-- style.scss - style of the contact-info component
-|   |   +-- tests/ - contains all unit & integration tests of the contact module
-|   |   +-- index.js - the container and entry point of the contact page
-|   |   +-- style.scss - the style of the contact page
-|   |   +-- service-provider.js - contains all the services needed by the contact module
-|   +-- about/ - all the components & tests of the about module
-|   |   +-- components/ - all the components of the module
-|   |   |   +-- content-item/ - presentational component that represents either `vision` or `mission` or `objective`
-|   |   |   |   +-- index.js - handles the logic of the item
-|   |   |   |   +-- style.scss - style of the item
-|   |   +-- tests/ - contains all unit & integration tests of the about module
-|   |   +-- index.js - the container and entry point of the about page
-|   |   +-- service-provider.js - contains all the services needed by the about module
-+-- shared/ - contains all presentational compoent that shared across multiple compoenents
-|   +-- navbar/ - the navbar component
-|   |   +-- index.js - the container of the navbar component that renders a logo and the links to pages of the application
-|   |   +-- style.scss - styles of the navbar
-|   +-- footer/ - the footer component
-|   |   +-- index.js - the container of the footer component that renders the logo, info, social list & the location of the organization
-|   |   +-- style.scss - styles of the footer
-|   +-- pagePreface/ - the preface of every secondery page either the home page
-|   |   +-- index.js - the container of the pageHeader component that get props of the location and represents it e.g: if u are in the about page it will represents: /about
-|   |   +-- style.scss - styles of the pageHeader
-+-- .env - to configure the urls to be absolute
+|__ index.js - the entry point of the app
+|__ style.scss - global styles
+|
+|__ assets/ - contains all the assets
+|
+|__ contexts/ - contains all the contexts needed by the app
+|  |__ language-context.js - contains the language context to control the language entire the app
+|
+|__ core/ - contains all the basics of the app
+|  |__ Reactor.js - the connector of the app
+|  |__ container-service-provider.js - the register of all the internal and other service provider
+|  |__ router-service-provider.js - internal service provider for routing
+|  |__ serviceWorker.js - handles the offline mode of the app
+|
+|__ modules/ - all the modules of the app
+|  |__ app/ 
+|  |  |__ component.js
+|  |  |__ service-provider.js
+|  |  |
+|  |  |__ pages/
+|  |      |__ about/
+|  |      |  |__ components/
+|  |      |  |  |__ content-item/
+|  |      |  |     |__ index.js
+|  |      |  |     |__ style.scss
+|  |      |  |  
+|  |      |  |__ tests/
+|  |      |  |__ index.js
+|  |      |__ contact/
+|  |      |  |__ components/
+|  |      |  |  |__ contact-form/
+|  |      |  |  |  |__ index.js
+|  |      |  |  |  |__ style.scss
+|  |      |  |  |  
+|  |      |  |  |__ contact-info/
+|  |      |  |     |__ index.js
+|  |      |  |     |__ style.scss
+|  |      |  |  
+|  |      |  |__ tests/
+|  |      |  |__ index.js
+|  |      |  |__ style.scss
+|  |      |  
+|  |      |__ gallery/
+|  |      |  |__ components/
+|  |      |  |  |__ gallery-container/
+|  |      |  |     |__ gallery-item/
+|  |      |  |     |  |__ index.js
+|  |      |  |     |  |__ style.scss
+|  |      |  |     |  
+|  |      |  |     |__ index.js
+|  |      |  |     |__ style.scss
+|  |      |  |  
+|  |      |  |__ tests/
+|  |      |  |__ index.js
+|  |      |  |__ style.scss
+|  |      |  
+|  |      |__ home/
+|  |         |__ components/
+|  |         |  |__ info/
+|  |         |  |  |__ components/
+|  |         |  |  |  |__ client/
+|  |         |  |  |     |__ index.js
+|  |         |  |  |     |__ style.scss
+|  |         |  |  |  
+|  |         |  |  |__ index.js
+|  |         |  |  |__ style.scss
+|  |         |  |
+|  |         |  |__ intro/
+|  |         |  |  |__ index.js
+|  |         |  |  |__ style.scss
+|  |         |  |
+|  |         |  |__ map/
+|  |         |  |  |__ index.js
+|  |         |  |  |__ style.scss
+|  |         |  |
+|  |         |  |__ services/
+|  |         |  |  |__ components/
+|  |         |  |  |  |__ service-item/
+|  |         |  |  |     |__ index.js
+|  |         |  |  |     |__ style.scss
+|  |         |  |  |   
+|  |         |  |  |__ index.js
+|  |         |  |  |__ style.scss
+|  |         |  |
+|  |         |  |__ testimonials/
+|  |         |     |__ components/
+|  |         |     |  |__ testimonial-item/
+|  |         |     |     |__ index.js
+|  |         |     |     |__ style.scss
+|  |         |     |  
+|  |         |     |__ index.js
+|  |         |     |__ style.scss
+|  |         |  
+|  |         |__ tests/
+|  |         |__ index.js
+|  |
+|  |__ products/ 
+|     |__ routes.js
+|     |__ service-provider.js
+|     |
+|     |__ pages/
+|     | 
+|     |__ tests/
+|
+|__ shared/ - all the shared data across the app
+   |__ footer/
+   |  |__ index.js
+   |  |__ style.scss
+   |
+   |__ layout/ - the layout of the app (navbar && footer)
+   |  |__ index.js
+   |
+   |__ navbar/
+   |  |__ index.js
+   |  |__ style.scss
+   |
+   |__ pagePreface/
+   |  |__ index.js
+   |  |__ style.scss
+   |
+   |__ utils/ - contains all the global utilities needed by the app
+   |  |__ translate.js - the functions handles the translation in collaboration with the `language.json` & `context API`
+   |
+   |__ language.json - the language reference
+   |
+   |__ menuList.js - the list of links that will be shown in the navbar or footer
+   |
+   |__ variables.scss - all the `scss` variables needed by the styles of the app
+
 ```
