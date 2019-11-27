@@ -1,5 +1,5 @@
 import React from 'react';
-import ServiceItem from './service-item';
+import ServiceItem from './components/service-item';
 
 import translate from "../../../../../../shared/utils/translate";
 

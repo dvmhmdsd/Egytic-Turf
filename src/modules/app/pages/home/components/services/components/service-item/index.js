@@ -1,5 +1,5 @@
 import React from 'react';
-import translate from '../../../../../../../shared/utils/translate';
+import translate from '../../../../../../../../shared/utils/translate';
 
 import "./style.scss";
 

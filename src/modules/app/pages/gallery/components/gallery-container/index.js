@@ -39,16 +39,20 @@ export default class GalleryContainer extends Component {
     e.stopPropagation();
 
     this.setState({
-      isModalOpen: !this.state.isModalOpen
+      isModalOpen: true
     }, this.customizeModal);
   }
 
+  hideModal = (e) => {
+    e.stopPropagation();
+
+    this.setState({
+      isModalOpen: false
+    });
+  }
+
   componentDidMount() {
-    document.body.addEventListener("click", () => {
-      this.setState({
-        isModalOpen: false
-      }, this.customizeModal);
-    })
+    
   }
 
   handleSelect = (selectedIndex) => {
@@ -80,14 +84,15 @@ export default class GalleryContainer extends Component {
           ))}
         </section>
 
-        {this.state.isModalOpen && <section className="gallery-slider text-center">
-          <Carousel activeIndex={this.state.index}>
+        {this.state.isModalOpen && <section onClick={e => e.stopPropagation()} className="gallery-slider text-center">
+          <Carousel activeIndex={this.state.index} onSelect={this.handleSelect}>
             {this.state.galleryItems.map((item, idx) => (
               <Carousel.Item key={idx}>
                 <GalleryItem item={item} />
               </Carousel.Item>
             ))}
           </Carousel>
+          <button className="hide-slider" onClick={this.hideModal}> hide </button>
         </section>}
       </>
     )

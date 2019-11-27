@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import TestimonialItem from './testimonial-item'
+import TestimonialItem from './components/testimonial-item'
 import translate from '../../../../../../shared/utils/translate'
 
 import "./style.scss";
