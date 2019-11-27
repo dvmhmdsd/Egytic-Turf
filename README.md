@@ -59,6 +59,7 @@ src/
 |  |      |  |  
 |  |      |  |__ tests/
 |  |      |  |__ index.js
+|  |      |
 |  |      |__ contact/
 |  |      |  |__ components/
 |  |      |  |  |__ contact-form/
