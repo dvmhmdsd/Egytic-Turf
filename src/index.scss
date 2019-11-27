@@ -7,6 +7,12 @@
 
 body {
   font-size: 22px;
+  position: relative;
+
+  &.modal-opened {
+    height: 100vh;
+    overflow-y: hidden;
+  }
 }
 
 .container {
@@ -36,4 +42,8 @@ body {
 
 .section-heading {
   color: $mainTextColor;
+}
+
+ul {
+  list-style: none;
 }

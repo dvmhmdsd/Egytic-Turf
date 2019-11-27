@@ -1,0 +1,18 @@
+.form-body {
+  form {
+    overflow: hidden;
+    .form-group {
+      width: 50%;
+      float: left;
+
+      &.message-textarea {
+          width: 100%;
+          float: none;
+
+          textarea {
+              resize: none;
+          }
+      }
+    }
+  }
+}

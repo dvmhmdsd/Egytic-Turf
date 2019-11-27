@@ -1,11 +1,23 @@
 import React, { Component } from 'react'
 import Layout from '../../../../shared/layout'
 
-export default class Home extends Component {
+import PagePreface from '../../../../shared/pagePreface'
+import ContactInfo from './components/contact-info'
+import ContactForm from './components/contact-form'
+
+import "./style.scss"
+
+export default class Contact extends Component {
     render() {
         return (
             <Layout>
-                <h1>Contact Component</h1>
+                <PagePreface context={this.props.context} />
+
+                <main className={`contact-body container ${this.props.context.lang === "ar" ? "reverse" : ""}`}>
+                    <ContactInfo />
+
+                    <ContactForm />
+                </main>
             </Layout>
         )
     }

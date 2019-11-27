@@ -16,7 +16,10 @@
     "testimonialsContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic minus eos error ipsa dolores reprehenderit perferendis, temporibus itaque eveniet odio.",
     "aboutBody1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ab consequuntur esse tenetur optio numquam pariatur, fugit praesentium provident veniam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, corporis? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, eaque.",
     "aboutBody2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ab consequuntur esse tenetur optio numquam pariatur, fugit praesentium provident veniam?",
-    "aboutTitle": "What is egytic ?"
+    "aboutTitle": "What is egytic ?",
+    "galleryHeading": "Our gallery",
+    "contactInfo": "Call us on",
+    "contactForm": "Message Us"
   },
   "ar": {
     "languages": "لغات",
@@ -35,6 +38,9 @@
     "testimonialsContent": "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبورأنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم",
     "aboutBody1": "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبورأنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبورأنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم",
     "aboutBody2": "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبورأنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم",
-    "aboutTitle": "ماهي egytic ?"
+    "aboutTitle": "ماهي egytic ?",
+    "galleryHeading": "معرض الصور",
+    "contactInfo": "إتصل بنا",
+    "contactForm": "أرسل لنا رساله"
   }
 }

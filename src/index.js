@@ -8,6 +8,8 @@ import ProductsModule from "./modules/products/service-provider";
 // global styles
 import "./index.scss"
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const reactor = new Reactor();
 
 // Register all the modules

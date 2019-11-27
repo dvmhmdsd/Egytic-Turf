@@ -1,0 +1,11 @@
+@import "../../../../../../shared/variables.scss";
+
+.info-body {
+  a {
+    color: $mainTextColor;
+    &:hover {
+        text-decoration: none;
+        color: $mainTextColor;
+    }
+  }
+}
