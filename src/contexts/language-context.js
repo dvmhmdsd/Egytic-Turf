@@ -17,12 +17,27 @@ export default class LanguageProvider extends Component {
         return window.location.pathname.slice(1, 3);
     }
 
+    // update the url to add the lang key
+    updateUrl(lang) {
+        let location = window.location.pathname;
+        // if the location has a lang key already, then remove it and add the new one
+        if (location.slice(1, 3).match(/en|ar/)) {
+            window.history.pushState("language routing", "language", `/${lang}${location.slice(3)}`)
+        } else {
+            window.history.pushState("language routing", "language", `/${lang}${location}`)
+        }
+    }
+
     changeLanguage = e => {
+        let langKey = e.target.dataset.language;
+
         this.setState({
-            lang: e.target.dataset.language
+            lang: langKey
         });
 
-        localStorage.setItem("languages", e.target.dataset.language);
+        localStorage.setItem("languages", langKey);
+
+        this.updateUrl(langKey);
     }
 
     render() {

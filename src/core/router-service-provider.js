@@ -23,7 +23,7 @@ function addRoute(path, component) {
 function Test() {
   const routes = routesList.map((route, idx) => {
     return (
-      <Route path={`/(en|ar|)${route.path}`} exact key={idx}>
+      <Route path={`/(|en|ar)${route.path}`} exact key={idx}>
         <LanguageContextProvider.Consumer>
           {context => (
             <route.component context={context} />
@@ -32,6 +32,8 @@ function Test() {
       </Route>
     );
   });
+
+  // console.log(routes)
 
   return (
     <Switch>

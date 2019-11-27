@@ -4,14 +4,14 @@ import Navbar from "../navbar";
 import Footer from "../footer";
 import { LanguageContextProvider } from '../../contexts/language-context';
 
-export default function Layout({ children }) {
+export default function Layout(props) {
     return (
         <>
             <LanguageContextProvider.Consumer>
                 {context => (
                     <>
-                        <Navbar context={context} />
-                        {children}
+                        <Navbar inHome={props.inHome} context={context} />
+                        {props.children}
                         <Footer context={context} />
                     </>
                 )}

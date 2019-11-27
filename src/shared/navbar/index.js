@@ -35,10 +35,11 @@ export default class Navbar extends Component {
   }
 
   render() {
-    let { context } = this.props;
+    let { context, inHome } = this.props;
     let { scrolled } = this.state;
+
     return (
-      <nav className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}>
+      <nav className={`navbar ${inHome ? "home-nav" : "page-nav"} ${scrolled ? "navbar--scrolled" : ""}`}>
         <section className={`container-fluid ${context.lang === "ar" ? "reverse" : ""}`}>
           <section className="navbar-logo">
             <a href="/" className="navbar-logo-link">

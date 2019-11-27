@@ -1,0 +1,18 @@
+@import "../../../../../../shared/variables.scss";
+
+.about-section {
+    padding: 40px;
+
+    .about-intro {
+        color: $mainTextColor;
+        font-size: 38px;
+
+        margin-bottom: 30px;
+    }
+
+    .about-paragraph {
+        color: rgb(34, 33, 33);
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+}
