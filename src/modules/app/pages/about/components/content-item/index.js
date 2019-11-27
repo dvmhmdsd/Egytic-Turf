@@ -6,7 +6,7 @@ import translate from "../../../../../../shared/utils/translate";
 
 export default function AboutContent({context}) {
     return (
-        <section className="about-section" dir={`${context.lang === "ar" ? "rtl" : "ltr"}`} >
+        <section className={`about-section ${context.lang === "ar" ? "text-right" : "text-left"}`} dir={`${context.lang === "ar" ? "rtl" : "ltr"}`} >
             <div className="container">
                 <h2 className="about-intro"> {translate("aboutTitle")} </h2>
 

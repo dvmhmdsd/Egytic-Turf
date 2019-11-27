@@ -19,7 +19,13 @@
     "aboutTitle": "What is egytic ?",
     "galleryHeading": "Our gallery",
     "contactInfo": "Call us on",
-    "contactForm": "Message Us"
+    "contactForm": "Message Us",
+    "email": "Email Address",
+    "user": "Username",
+    "phone": "Phone Number",
+    "organization": "Organization",
+    "message": "Message",
+    "submit": "Send"
   },
   "ar": {
     "languages": "لغات",
@@ -38,9 +44,15 @@
     "testimonialsContent": "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبورأنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم",
     "aboutBody1": "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبورأنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبورأنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم",
     "aboutBody2": "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبورأنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم",
-    "aboutTitle": "ماهي egytic ?",
+    "aboutTitle": "ماهي egytic؟",
     "galleryHeading": "معرض الصور",
     "contactInfo": "إتصل بنا",
-    "contactForm": "أرسل لنا رساله"
+    "contactForm": "أرسل لنا رساله",
+    "email": "الإيميل",
+    "user": "إسم المستخدم",
+    "phone": "رقم الهاتف",
+    "organization": "الشركه",
+    "message": "الرساله",
+    "submit": "أرسل"
   }
 }

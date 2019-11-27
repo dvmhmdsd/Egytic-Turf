@@ -13,10 +13,10 @@ export default class Contact extends Component {
             <Layout>
                 <PagePreface context={this.props.context} />
 
-                <main className={`contact-body container ${this.props.context.lang === "ar" ? "reverse" : ""}`}>
-                    <ContactInfo />
+                <main className={`contact-body container ${this.props.context.lang === "ar" ? "reverse text-right" : "text-left"}`}>
+                    <ContactInfo context={this.props.context} />
 
-                    <ContactForm />
+                    <ContactForm context={this.props.context} />
                 </main>
             </Layout>
         )

@@ -9,7 +9,7 @@ export default function PagePreface({ context }) {
 
   let pathUpper = path.replace(path[0], path[0].toUpperCase());
   return (
-    <section className="preface-section" dir={`${context.lang === "ar" ? "rtl" : "ltr"}`} >
+    <section className={`preface-section ${context.lang === "ar" ? "text-right" : "text-left"}`} dir={`${context.lang === "ar" ? "rtl" : "ltr"}`} >
       <div className="overlay"></div>
       <div className="container">
         <h1 className="preface-intro"> {translate(`${pathUpper}`)} </h1>
