@@ -52,7 +52,7 @@ export default class GalleryContainer extends Component {
   }
 
   componentDidMount() {
-    
+
   }
 
   handleSelect = (selectedIndex) => {
@@ -92,7 +92,7 @@ export default class GalleryContainer extends Component {
               </Carousel.Item>
             ))}
           </Carousel>
-          <button className="hide-slider" onClick={this.hideModal}> hide </button>
+            <button className="hide-slider" onClick={this.hideModal}> &#10006; </button>
         </section>}
       </>
     )
