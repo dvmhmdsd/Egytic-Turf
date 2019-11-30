@@ -2,9 +2,10 @@ import * as serviceWorker from "./serviceWorker";
 import containerServiceProvider from "./container-service-provider";
 
 import routerServiceProvider from "./router-service-provider";
+import languageServiceProvider from "./language-service-provider";
 
 export default class Reactor {
-  internalServiceProviders = [routerServiceProvider];
+  internalServiceProviders = [routerServiceProvider, languageServiceProvider];
 
   constructor() {
     // Register all the internal service providers needed for the modules

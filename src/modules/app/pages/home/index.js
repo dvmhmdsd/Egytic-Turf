@@ -8,6 +8,7 @@ import Testimonials from './components/testimonials'
 
 export default class Home extends Component {
   render() {
+    console.log(this.props)
     return (
       // inHome prop is to style the navbar according to the page
       <Layout inHome={true}>

@@ -7,7 +7,7 @@ import LanguageProvider, { LanguageContextProvider } from "../contexts/language-
 
 let routesList = [];
 
-/**
+/** 
  * Add a new route to the routes list
  *
  * @param {string} path
@@ -32,8 +32,6 @@ function Test() {
       </Route>
     );
   });
-
-  // console.log(routes)
 
   return (
     <Switch>
